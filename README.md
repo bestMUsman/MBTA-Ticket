@@ -13,6 +13,7 @@ MBTA Ticket App allows you purchase the tickets from your location to your desti
 ### How to use it?  
  - Visit the website
  - Login, if you have an account otherwise you would need to register
+ - Demo Account => ***Username***: **example@gmail.com** | ***Password***: **example**
  - Click on "Buy Your Ticket" Button
  - Select your Origin location in the select input then press Submit
  - You may also search in the select input by typing there
