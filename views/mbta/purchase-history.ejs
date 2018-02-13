@@ -1,0 +1,60 @@
+<% include ../partials/bootstrap_boilerplate %>
+  <% include ../partials/header %>
+
+
+    <div class="content-container select-container table-container">
+
+      <div class="container">
+        <div class="col-md-8 ">
+          <h1 class="page-header select-destination text-center">Purchase History</h1>
+
+          <% if (message) { %>
+            <div class="alert alert-success">
+              <strong>
+                <%= message %>
+              </strong>
+            </div>
+            <% } %>
+              <div class="row">
+                <div class="panel panel-primary filterable" style="height:100%">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Ticket History</h3>
+                    <div class="pull-right">
+                      <button class="btn btn-default btn-xs btn-filter">
+                        <span class="glyphicon glyphicon-filter"></span> Filter</button>
+                    </div>
+                  </div>
+                  <table class="table table-fixed">
+                    <thead>
+                      <tr class="filters">
+                        <th>
+                          <input type="text" class="form-control" placeholder="Origin" disabled>
+                        </th>
+                        <th>
+                          <input type="text" class="form-control" placeholder="Destination" disabled>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% mbta.forEach(function(e) { %>
+                        <tr>
+                          <td>
+                            <%= e.origin %>
+                          </td>
+                          <td>
+                            <%= e.destination %>
+                          </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <% include ../partials/end %>

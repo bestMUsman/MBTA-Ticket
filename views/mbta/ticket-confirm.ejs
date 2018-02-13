@@ -1,0 +1,20 @@
+<% include ../partials/bootstrap_boilerplate %>
+    <% include ../partials/header %>
+
+        <div class="content-container select-container">
+            <div class="container">
+                <div class="col-md-8 ">
+                    <h1 class="page-header text-center">Confirm Your Purchase</h1>
+                    <h2 class="text-center font-weight-bold ticket-confirm-text" style="color:black ">Ticket:
+                        <%= origin %>
+                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <%= destination %>
+                    </h2>
+                    <form method='POST' onsubmit="" action='/mbta/ticket-confirm'>
+                        <button type="submit" id="submit" class="btn btn-success btn-block">Purchase</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <% include ../partials/end %>

@@ -1,0 +1,26 @@
+<% include ../partials/bootstrap_boilerplate %>
+  <% include ../partials/header %>
+
+    <div class="content-container select-container">
+      <div class="container">
+        <div class="col-md-8 ">
+          <h1 class="page-header select-origin text-center">Select Origin</h1>
+          <div class="row-fluid">
+            <form method='POST' onsubmit="handleOriginForm()" action='/mbta/select-origin'>
+              <select class="selectpicker" id="originSelectForm" name="origin" data-show-subtext="true" data-live-search="true" required>
+                <option selected value="">Select Your Origin</option>
+                <% commuterRail.forEach(function(e, i) { %>
+                  <option index="<%= i %>" value="<%= e.route %>" data-subtext="<%= e.route %>">
+                    <%= e.route %>
+                  </option>
+                  <% }) %>
+              </select>
+              <input name='originIndex' id="originIndex" type='hidden' value='' />
+              <button type="submit" id="submit" class="btn btn-success btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% include ../partials/end %>

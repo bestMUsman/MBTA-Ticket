@@ -1,0 +1,26 @@
+<% include ../partials/bootstrap_boilerplate %>
+  <% include ../partials/header %>
+
+    <div class="content-container select-container">
+      <div class="container">
+        <div class="col-md-8 ">
+          <h1 class="page-header select-destination text-center">Select Your Destination</h1>
+          <div class="row-fluid">
+            <form method='POST' action='/mbta/select-destination'>
+              <select class="selectpicker" name="destination" id="destinationSelectForm" data-show-subtext="true" data-live-search="true"
+                required>
+                <option selected value="">Select Your Destination</option>
+                <% possibleDestinations.forEach(function(e, i) { %>
+                  <option index="<%= i %>" value="<%= e.route %>" data-subtext="<%= e.route %>">
+                    <%= e.route %>
+                  </option>
+                  <% }) %>
+              </select>
+              <button type="submit" id="submit" class="btn btn-success btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% include ../partials/end %>
