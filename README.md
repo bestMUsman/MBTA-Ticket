@@ -7,10 +7,10 @@ Welcome to MBTA Ticket App!
 =====================
 
 
-## What does it do?  
+### What does it do?  
 MBTA Ticket App allows you purchase the tickets from your location to your destination.
                                             
-## How to use it?  
+### How to use it?  
  - Visit the website
  - Login, if you have an account otherwise you would need to register
  - Click on "Buy Your Ticket" Button
@@ -20,7 +20,7 @@ MBTA Ticket App allows you purchase the tickets from your location to your desti
  - Confirm Your Purchase and then press the "Purchase" button to purchase the ticket
  - You will be redirected to your "Ticket History" page, where you would be able to see all your ticket history
 
-## How to Install it locally? 
+### How to Install it locally? 
  - Download the repository in your local machine
  - Open a terminal, and navigate to "MBTA App" directory
  - Once you are there then do "npm install", to install the dependencies¹ needed to run this app
@@ -29,7 +29,7 @@ MBTA Ticket App allows you purchase the tickets from your location to your desti
 
 1) Dependencies Needed: bcryptjs, body-parser, cookie-parser, dotenv, ejs, express, express-session, method-override, morgan, nodemon, passport, passport-local, path, pg-promise
 
-## What techs are being used? 
+### What techs are being used? 
  - Node.js/Express
  - Node Package Manager(npm)
  - PostgreSQL
