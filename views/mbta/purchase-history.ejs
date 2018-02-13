@@ -36,16 +36,28 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <% mbta.forEach(function(e) { %>
-                        <tr>
-                          <td>
-                            <%= e.origin %>
-                          </td>
-                          <td>
-                            <%= e.destination %>
-                          </td>
-                        </tr>
-                        <% }) %>
+                      <% if (mbta.length !== 0) { %>
+                        <% mbta.forEach(function(e) { %>
+                          <tr>
+                            <td>
+                              <%= e.origin %>
+                            </td>
+                            <td>
+                              <%= e.destination %>
+                            </td>
+                          </tr>
+                          <% }) %>
+                            <% } else {%>
+                              <tr>
+                                <td>
+                                  --- You haven't bought any ticket yet! --- 
+                                </td>
+                                <td>
+                                  --- You haven't bought any ticket yet! ---
+                                </td>
+                              </tr>
+                              <% } %>
+
                     </tbody>
                   </table>
                 </div>

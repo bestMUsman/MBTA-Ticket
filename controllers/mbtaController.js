@@ -5,7 +5,7 @@ const controller = {};
 controller.showTicketsByUserId = (req, res) => {
   MBTAModel.findTicketsByUserId(req.user.id)
     .then(mbta => {
-      let message = (req.session.boughtTicket) ? "Congrulations You Just Purchased A Ticket" : false;
+      let message = (req.session.boughtTicket) ? "Congratulations You Just Purchased A Ticket!" : false;
       req.session.boughtTicket = false;
       res.render("mbta/purchase-history", {
         message,
