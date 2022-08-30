@@ -39,4 +39,4 @@ MBTA Ticket App allows you purchase the tickets from your location to your desti
  - CSS(Flexbox)
  - User Authentication
  
-![alt text](https://github.com/askflow1111/MBTA-Ticket/blob/master/MBTA.png?raw=true)
+![alt text](https://github.com/musmanrao1994/MBTA-Ticket/blob/master/MBTA.png?raw=true)
